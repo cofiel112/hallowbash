@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://sgm5cucl8gbb"]
+
+[ext_resource type="Script" uid="uid://ccc8sjelhenix" path="res://big/ServerCilentComponent/server_button.gd" id="1_j5f4q"]
+[ext_resource type="Script" uid="uid://n4myfu3hkap5" path="res://big/ServerCilentComponent/client_button.gd" id="2_i73dp"]
+
+[node name="Control" type="Control" unique_id=675213712]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1418313185]
+
+[node name="ServerClient" type="VBoxContainer" parent="CanvasLayer" unique_id=1546351144]
+offset_right = 66.0
+offset_bottom = 66.0
+
+[node name="Server" type="Button" parent="CanvasLayer/ServerClient" unique_id=1985809619]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "HOST"
+script = ExtResource("1_j5f4q")
+
+[node name="Client" type="Button" parent="CanvasLayer/ServerClient" unique_id=222087891]
+layout_mode = 2
+text = "JOIN"
+script = ExtResource("2_i73dp")
+
+[node name="BoxContainer" type="BoxContainer" parent="CanvasLayer" unique_id=1471736653]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -213.0
+offset_bottom = 40.0
+grow_horizontal = 0
+scale = Vector2(0.96666664, 0.9765625)
+
+[node name="Name" type="Label" parent="CanvasLayer/BoxContainer" unique_id=323343544]
+layout_mode = 2
+text = "CharacterBody2D.velocity.y"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="CanvasLayer/ServerClient/Server" to="CanvasLayer/ServerClient/Server" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/ServerClient/Client" to="CanvasLayer/ServerClient/Server" method="_on_client_pressed"]
+[connection signal="pressed" from="CanvasLayer/ServerClient/Client" to="CanvasLayer/ServerClient/Client" method="_on_pressed"]

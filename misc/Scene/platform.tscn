@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cmqbny7jah5e"]
+
+[ext_resource type="Texture2D" uid="uid://cvxwtio3qvqx5" path="res://misc/sprites/Parts-of-SPEECH-Noun-Verb-Preposition-Adjective-Adverb-Pronoun-Conjunction-Interjection-646511082.png" id="1_p7ult"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(20.2922, 19.5999)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(21.0918, 2.2917)
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.746528, 0.0426136)
+texture = ExtResource("1_p7ult")

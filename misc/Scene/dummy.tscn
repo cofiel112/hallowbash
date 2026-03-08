@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://n3viy6tyhjrj"]
+
+[ext_resource type="Texture2D" uid="uid://4qfjsmduv30q" path="res://big/misc/dummy.png" id="1_l2aie"]
+[ext_resource type="Script" uid="uid://dr8bvnfebp76" path="res://addons/health_hitbox_hurtbox/health/health.gd" id="1_rcqeu"]
+[ext_resource type="Script" uid="uid://dtfoilkdcfvgv" path="res://addons/health_hitbox_hurtbox/2d/hurt_box_2d/basic_hurt_box_2d.gd" id="3_rcqeu"]
+[ext_resource type="PackedScene" uid="uid://cvp6sign1ayel" path="res://big/PlayerComponent/collision_box.tscn" id="4_0dcm8"]
+[ext_resource type="Script" uid="uid://cobp4qehnuq77" path="res://addons/health_hitbox_hurtbox/resources/health_modifier.gd" id="4_dxvrk"]
+
+[sub_resource type="Resource" id="Resource_dxvrk"]
+script = ExtResource("4_dxvrk")
+
+[sub_resource type="Resource" id="Resource_jym2w"]
+script = ExtResource("4_dxvrk")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rcqeu"]
+resource_local_to_scene = true
+resource_name = "playerhurtbox"
+size = Vector2(50, 56)
+
+[sub_resource type="Animation" id="Animation_0dcm8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_bp636"]
+resource_name = "hiy"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CharacterBody2D/Sprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.8, 0.8), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3lpcu"]
+_data = {
+&"RESET": SubResource("Animation_0dcm8"),
+&"hit": SubResource("Animation_bp636")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=2017135990]
+
+[node name="HealthComponent" type="Node" parent="." unique_id=1184888028]
+script = ExtResource("1_rcqeu")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1514277497]
+texture = ExtResource("1_l2aie")
+
+[node name="PlayerHurtbox" type="Area2D" parent="." unique_id=2040232811 node_paths=PackedStringArray("health")]
+unique_name_in_owner = true
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("3_rcqeu")
+health = NodePath("../HealthComponent")
+modifiers = Dictionary[int, ExtResource("4_dxvrk")]({
+1: SubResource("Resource_dxvrk"),
+2: SubResource("Resource_jym2w")
+})
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtbox" unique_id=1779380676]
+position = Vector2(-4, 6)
+shape = SubResource("RectangleShape2D_rcqeu")
+debug_color = Color(0, 0.81960785, 0.78039217, 0.41960785)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=827349495]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_3lpcu")
+
+[node name="dummy" type="Node2D" parent="." unique_id=852432297]
+
+[node name="CollisionBox" parent="." unique_id=510353533 instance=ExtResource("4_0dcm8")]
+position = Vector2(-3.75, 0.75)

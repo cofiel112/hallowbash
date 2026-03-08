@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bqh8waq6ld2u4"]
+
+[ext_resource type="Texture2D" uid="uid://bc3u2xxu5k2k3" path="res://big/PlayerComponent/sprites/test_sprite.png" id="1_h751q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y32ns"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1065429913]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1224806149]
+shape = SubResource("RectangleShape2D_y32ns")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=30761423]
+texture_filter = 1
+texture_repeat = 1
+texture = ExtResource("1_h751q")

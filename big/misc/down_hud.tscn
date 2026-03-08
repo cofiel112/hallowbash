@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://ce4wd1ky2rffh"]
+
+[ext_resource type="Script" uid="uid://ixcq0ur6hxo6" path="res://big/misc/heartcounterrrr.gd" id="1_hhqw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_467r7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hx6hx"]
+bg_color = Color(0.93, 0.08369998, 0.08369998, 1)
+border_color = Color(0, 0, 0, 1)
+corner_detail = 1
+shadow_color = Color(0.91015625, 0.91015625, 0.91015625, 0.6)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hx6hx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb5cp"]
+bg_color = Color(0.1615, 0.333625, 0.85, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2a3oe"]
+bg_color = Color(0.83, 0.7990133, 0.36519998, 1)
+
+[node name="ProgressBarHeart" type="ProgressBar" unique_id=949149799]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.5
+offset_top = -10.0
+offset_right = 61.5
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_styles/background = SubResource("StyleBoxEmpty_467r7")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hx6hx")
+value = 100.0
+show_percentage = false
+
+[node name="HeartCounter" type="Label" parent="." unique_id=1458352150 node_paths=PackedStringArray("HeartAmount")]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+script = ExtResource("1_hhqw8")
+HeartAmount = NodePath(".")
+
+[node name="ProgressBarMana" type="ProgressBar" parent="." unique_id=2112137512]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 123.0
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_hx6hx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bb5cp")
+value = 100.0
+show_percentage = false
+
+[node name="ProgressBarTension" type="ProgressBar" parent="ProgressBarMana" unique_id=1063793567]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 123.0
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_hx6hx")
+theme_override_styles/fill = SubResource("StyleBoxFlat_2a3oe")
+value = 100.0
+show_percentage = false
+
+[node name="TensionCounter" type="Label" parent="ProgressBarMana/ProgressBarTension" unique_id=1178026632]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="ManaCounter" type="Label" parent="ProgressBarMana" unique_id=511245306]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="ContainerForPlayerName" type="Container" parent="." unique_id=1474211469]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -15.5
+offset_top = 39.0
+offset_right = 15.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="PlayerName" type="Label" parent="ContainerForPlayerName" unique_id=1570338561]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "TEA"
+horizontal_alignment = 1

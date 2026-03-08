@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvp6sign1ayel"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y8w33"]
+
+[node name="CollisionBox" type="CollisionShape2D"]
+shape = SubResource("RectangleShape2D_y8w33")
+debug_color = Color(0.7, 0.536667, 0, 0.419608)

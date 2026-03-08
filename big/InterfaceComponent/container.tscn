@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6i8611uaerrq"]
+
+[ext_resource type="PackedScene" uid="uid://ce4wd1ky2rffh" path="res://big/misc/down_hud.tscn" id="1_g01g5"]
+
+[node name="Container" type="Container" unique_id=2060213739]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -123.0
+offset_top = -193.0
+offset_right = -123.0
+offset_bottom = -193.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.96, 1)
+
+[node name="ProgressBarHeart" parent="." unique_id=949149799 instance=ExtResource("1_g01g5")]
+layout_mode = 2

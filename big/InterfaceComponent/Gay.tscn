@@ -1,0 +1,114 @@
+[gd_scene format=3 uid="uid://bvdmtfjbcyh61"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nl82x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mfxuq"]
+bg_color = Color(0.1615, 0.333625, 0.85, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl82x"]
+bg_color = Color(0.8509804, 0.27019438, 0.23843558, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivpb4"]
+bg_color = Color(0.83, 0.7990133, 0.36519998, 1)
+
+[node name="Container" type="Container" unique_id=523870522]
+
+[node name="Control" type="Control" parent="." unique_id=101371651]
+layout_mode = 2
+
+[node name="ProgressBarMana" type="ProgressBar" parent="Control" unique_id=1256368512]
+layout_mode = 0
+offset_right = 123.0
+offset_bottom = 20.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_nl82x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mfxuq")
+value = 100.0
+show_percentage = false
+
+[node name="ManaCounter" type="Label" parent="Control/ProgressBarMana" unique_id=1653409782]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="ProgressBarHeart" type="ProgressBar" parent="Control/ProgressBarMana" unique_id=130163925]
+layout_mode = 0
+offset_top = -20.0
+offset_right = 123.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_nl82x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_nl82x")
+value = 100.0
+show_percentage = false
+
+[node name="HeartCounter" type="Label" parent="Control/ProgressBarMana/ProgressBarHeart" unique_id=1174149909]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="ProgressBarTension" type="ProgressBar" parent="Control/ProgressBarMana/ProgressBarHeart" unique_id=755989222]
+layout_mode = 0
+offset_top = 40.0
+offset_right = 123.0
+offset_bottom = 60.0
+theme_override_styles/background = SubResource("StyleBoxEmpty_nl82x")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ivpb4")
+value = 100.0
+show_percentage = false
+
+[node name="TensionCounter" type="Label" parent="Control/ProgressBarMana/ProgressBarHeart/ProgressBarTension" unique_id=746268797]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -13.5
+offset_top = -22.0
+offset_right = 14.5
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+tooltip_text = "jdsajdlsjdljlksajdklsajdlajdl"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+text = "100"
+
+[node name="PlayerName" type="Label" parent="Control/ProgressBarMana/ProgressBarHeart/ProgressBarTension" unique_id=689929527]
+layout_mode = 0
+offset_top = 20.0
+offset_right = 29.0
+offset_bottom = 43.0
+size_flags_horizontal = 4
+text = "TEA"
+horizontal_alignment = 1
