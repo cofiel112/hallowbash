@@ -151,7 +151,6 @@ func jump():
 	velocity.y = jump_speed
 func attack():
 	attacking = true
-	if Engine.get_physics_frames() % 2 == 0:
-		animation.play("Attack")
+	animation.play("Attack")
 
 # debug console stuff
