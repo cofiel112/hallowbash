@@ -24,6 +24,12 @@ config/icon="uid://bim23p6sgaaid"
 [autoload]
 
 Console="*uid://ouiu5xh1cs8n"
+NetworkTime="*uid://cnqdxyjptkfvp"
+NetworkTimeSynchronizer="*uid://5rmn2ik3kjo8"
+NetworkRollback="*uid://gas743comroj"
+NetworkEvents="*uid://bdmobxxptryj0"
+NetworkPerformance="*uid://cqgf7aqmjfoa3"
+DebugMenu="*uid://cggqb75a8w8r"
 
 [debug]
 
@@ -39,7 +45,7 @@ window/vsync/vsync_mode=0
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/console/plugin.cfg", "res://addons/health_hitbox_hurtbox/plugin.cfg")
+enabled=PackedStringArray("res://addons/buff_er/plugin.cfg", "res://addons/console/plugin.cfg", "res://addons/debug_menu/plugin.cfg", "res://addons/health_hitbox_hurtbox/plugin.cfg", "res://addons/netfox.internals/plugin.cfg", "res://addons/netfox/plugin.cfg")
 
 [input]
 
