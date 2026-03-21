@@ -4,7 +4,8 @@ var player_maxheart = 100
 var player_maxmana = 100
 var player_maxtension = 100
 
-
+var x_input = Input.get_action_strength("right") - Input.get_action_strength("left")
+var y_input = Input.get_action_strength("up") - Input.get_action_strength("down")
 var direction = Input.get_action_strength("right") - Input.get_action_strength("left")
 var _facing = 0
 
@@ -68,7 +69,7 @@ func _process(delta) -> void:
 func _physics_process(delta):
 	## ATTACK
 	
-	## JUMP
+	## 1 JUMP
 	# Add gravity every frame.
 	velocity.y += gravity * delta
 	# Adds a max amount of vertical velocity.
@@ -81,7 +82,7 @@ func _physics_process(delta):
 		print("Y Velocity:", velocity.y)
 		print(coyote_timer)
 		print(position)
-	## 3 UP DOWN LEFT RIGHT
+	## 2 PLATFORMER MOVEMENT
 	# Move left or right.
 	var x_input = Input.get_action_strength("right") - Input.get_action_strength("left")
 	var y_input = Input.get_action_strength("up") - Input.get_action_strength("down")
@@ -92,6 +93,7 @@ func _physics_process(delta):
 	# Moves the player based on velocity, stops on collision,
 	move_and_slide()
 	# Flip sprite based on direction.
+	var direction = Input.get_action_strength("right") - Input.get_action_strength("left")
 	if direction > 0:
 		_facing = 1
 		sprite_2d.scale.x = 1
