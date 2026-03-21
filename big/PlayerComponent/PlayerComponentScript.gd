@@ -4,8 +4,7 @@ var player_maxheart = 100
 var player_maxmana = 100
 var player_maxtension = 100
 
-var x_input = Input.get_action_strength("right") - Input.get_action_strength("left")
-var y_input = Input.get_action_strength("up") - Input.get_action_strength("down")
+
 var direction = Input.get_action_strength("right") - Input.get_action_strength("left")
 var _facing = 0
 
@@ -84,7 +83,8 @@ func _physics_process(delta):
 		print(position)
 	## 3 UP DOWN LEFT RIGHT
 	# Move left or right.
-	
+	var x_input = Input.get_action_strength("right") - Input.get_action_strength("left")
+	var y_input = Input.get_action_strength("up") - Input.get_action_strength("down")
 	# Accelerate and deaccelerate, will determine if it goes up based on acceleration, or up based on friction.
 	var velocity_weight = delta * (acceleration if Input.get_axis("left", "right") or Input.get_axis("right", "left")else friction)
 	# Smooth velocity.x with velocity_weight, and move_speed only if there is x_input, since else it will be a 0.
