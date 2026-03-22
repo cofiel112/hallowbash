@@ -14,4 +14,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept"):
 		inst(get_global_mouse_position)
 		
+	if Input.is_action_just_pressed("ui_cancel"):
+		thenode.get_children().quene_free()
 	pass

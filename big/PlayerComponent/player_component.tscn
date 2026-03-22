@@ -57,6 +57,14 @@ amount = 25
 script = ExtResource("6_4itvu")
 amount = 25
 
+[sub_resource type="Resource" id="Resource_3vybm"]
+script = ExtResource("6_4itvu")
+amount = 25
+
+[sub_resource type="Resource" id="Resource_vwdwv"]
+script = ExtResource("6_4itvu")
+amount = 25
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkdjo"]
 resource_local_to_scene = true
 resource_name = "playerhitbox"
@@ -187,7 +195,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_vtsnf")
 amount = 25
-actions = Array[ExtResource("6_4itvu")]([SubResource("Resource_4xs84"), SubResource("Resource_vtsnf"), SubResource("Resource_4itvu"), SubResource("Resource_vvosn"), SubResource("Resource_c0h32"), SubResource("Resource_u3aed"), SubResource("Resource_d2fb8"), SubResource("Resource_s4rj4"), SubResource("Resource_lktiy"), SubResource("Resource_o0iso")])
+actions = Array[ExtResource("6_4itvu")]([SubResource("Resource_4xs84"), SubResource("Resource_vtsnf"), SubResource("Resource_4itvu"), SubResource("Resource_vvosn"), SubResource("Resource_c0h32"), SubResource("Resource_u3aed"), SubResource("Resource_d2fb8"), SubResource("Resource_s4rj4"), SubResource("Resource_lktiy"), SubResource("Resource_o0iso"), SubResource("Resource_3vybm"), SubResource("Resource_vwdwv")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox" unique_id=1544124210]
 position = Vector2(28, -8)
