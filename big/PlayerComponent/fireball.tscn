@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://7s12k6ku6wjx"]
+
+[ext_resource type="Shader" uid="uid://bx7h4s5ripbxe" path="res://big/PlayerComponent/fireball.gdshader" id="1_8qfjn"]
+[ext_resource type="Texture2D" uid="uid://5ofe64hgvae6" path="res://big/PlayerComponent/sprites/fireball.png" id="2_y7a1x"]
+[ext_resource type="Script" uid="uid://q71fb5qcoxqn" path="res://big/PlayerComponent/fireballscript.gd" id="3_q8bu3"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6g3as"]
+shader = ExtResource("1_8qfjn")
+shader_parameter/mask_texture = ExtResource("2_y7a1x")
+shader_parameter/color1 = Color(1, 0, 0, 1)
+shader_parameter/color2 = Color(0, 0, 0, 1)
+shader_parameter/color3 = Color(1, 1, 1, 1)
+
+[node name="Fireball" type="Node2D" unique_id=1268249351]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1974324032]
+material = SubResource("ShaderMaterial_6g3as")
+texture = ExtResource("2_y7a1x")
+script = ExtResource("3_q8bu3")

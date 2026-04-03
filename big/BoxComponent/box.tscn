@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cs8ksjdp3mcsk"]
+
+[ext_resource type="Script" uid="uid://ccthjuvbfi14" path="res://big/PlayerComponent/sdasdasdasd.gd" id="1_5bl0e"]
+[ext_resource type="Script" uid="uid://dn155u3t4twiy" path="res://big/BoxComponent/box.gd" id="1_pjb2w"]
+[ext_resource type="Texture2D" uid="uid://d0ypehynkb275" path="res://big/PlayerComponent/sprites/tea2.png" id="2_5bl0e"]
+
+[node name="Box" type="Node2D" unique_id=1042678992]
+script = ExtResource("1_5bl0e")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055920470]
+texture = ExtResource("2_5bl0e")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2068526211]
+script = ExtResource("1_pjb2w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1516329791]
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D/CollisionShape2D" unique_id=36164933]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=411257993]

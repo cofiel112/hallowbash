@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://degievoesk1kt" path="res://misc/Scene/stage.tscn" id="1_vioq3"]
 [ext_resource type="PackedScene" uid="uid://dymndo330y5t1" path="res://big/PlayerComponent/player_component.tscn" id="3_i7j7d"]
 [ext_resource type="PackedScene" uid="uid://n3viy6tyhjrj" path="res://misc/Scene/dummy.tscn" id="3_mfyvu"]
+[ext_resource type="PackedScene" uid="uid://cs8ksjdp3mcsk" path="res://big/BoxComponent/box.tscn" id="4_li7s8"]
 
 [node name="Debug" type="Node2D" unique_id=1640000086]
 scale = Vector2(2, 2)
@@ -14,3 +15,5 @@ position = Vector2(-38, -82)
 
 [node name="dummy" parent="." unique_id=852432297 instance=ExtResource("3_mfyvu")]
 position = Vector2(44, -80)
+
+[node name="Box" parent="." unique_id=1042678992 instance=ExtResource("4_li7s8")]

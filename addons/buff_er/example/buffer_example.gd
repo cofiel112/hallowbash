@@ -11,7 +11,7 @@ extends CharacterBody2D
 # Setting the third parameter to false gives more control on the buffering, but you may have to call Buffer.flush to manually flush the buffers
 
 # Here we want both pre and post buffering
-var _jump_buffer := Buffer.new(0.15, 0.15, true)
+var _jump_buffer := Buffer.new(0.100, 0.100, true)
 # Here we only want pre-buffering (we don't want to run the action while we're doing it)
 var _vfx_buffer := Buffer.new(0.15, 0, true)
 

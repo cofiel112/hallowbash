@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://dymndo330y5t1"]
 
 [ext_resource type="Script" uid="uid://cjlt03kdelpqd" path="res://big/PlayerComponent/PlayerComponentScript.gd" id="1_lkdjo"]
-[ext_resource type="Script" uid="uid://ccthjuvbfi14" path="res://big/PlayerComponent/sdasdasdasd.gd" id="2_4itvu"]
 [ext_resource type="PackedScene" uid="uid://cvp6sign1ayel" path="res://big/PlayerComponent/collision_box.tscn" id="2_6x07o"]
 [ext_resource type="PackedScene" uid="uid://bycri01lioi0n" path="res://big/PlayerComponent/sprite_2d.tscn" id="3_04s7d"]
 [ext_resource type="Texture2D" uid="uid://diqxl0ebxl14y" path="res://big/PlayerComponent/sprites/tea.png" id="4_wx4cj"]
@@ -62,6 +61,22 @@ script = ExtResource("6_4itvu")
 amount = 25
 
 [sub_resource type="Resource" id="Resource_vwdwv"]
+script = ExtResource("6_4itvu")
+amount = 25
+
+[sub_resource type="Resource" id="Resource_jwo10"]
+script = ExtResource("6_4itvu")
+amount = 25
+
+[sub_resource type="Resource" id="Resource_p1iso"]
+script = ExtResource("6_4itvu")
+amount = 25
+
+[sub_resource type="Resource" id="Resource_6pih3"]
+script = ExtResource("6_4itvu")
+amount = 25
+
+[sub_resource type="Resource" id="Resource_v0nif"]
 script = ExtResource("6_4itvu")
 amount = 25
 
@@ -195,7 +210,7 @@ collision_layer = 2
 collision_mask = 2
 script = ExtResource("6_vtsnf")
 amount = 25
-actions = Array[ExtResource("6_4itvu")]([SubResource("Resource_4xs84"), SubResource("Resource_vtsnf"), SubResource("Resource_4itvu"), SubResource("Resource_vvosn"), SubResource("Resource_c0h32"), SubResource("Resource_u3aed"), SubResource("Resource_d2fb8"), SubResource("Resource_s4rj4"), SubResource("Resource_lktiy"), SubResource("Resource_o0iso"), SubResource("Resource_3vybm"), SubResource("Resource_vwdwv")])
+actions = Array[ExtResource("6_4itvu")]([SubResource("Resource_4xs84"), SubResource("Resource_vtsnf"), SubResource("Resource_4itvu"), SubResource("Resource_vvosn"), SubResource("Resource_c0h32"), SubResource("Resource_u3aed"), SubResource("Resource_d2fb8"), SubResource("Resource_s4rj4"), SubResource("Resource_lktiy"), SubResource("Resource_o0iso"), SubResource("Resource_3vybm"), SubResource("Resource_vwdwv"), SubResource("Resource_jwo10"), SubResource("Resource_p1iso"), SubResource("Resource_6pih3"), SubResource("Resource_v0nif")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHitbox" unique_id=1544124210]
 position = Vector2(28, -8)
@@ -218,6 +233,5 @@ animation = &"new_animation"
 [node name="SkillComponent" type="Node" parent="." unique_id=610012694]
 
 [node name="PreloadComponent" type="Node2D" parent="." unique_id=374425315]
-script = ExtResource("2_4itvu")
 
 [connection signal="child_entered_tree" from="." to="." method="_on_child_entered_tree"]
